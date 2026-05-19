@@ -6,47 +6,6 @@
 
 ---
 
-## 📂 Folder Structure
-
-```
-01-FUNDAMENTALS/
-│
-├── README.md                        ← You are here
-│
-├── 01-virtualization/
-│   └── notes.md                     ← What is virtualization, why it exists
-│
-├── 02-vms-vs-containers/
-│   └── notes.md                     ← Core comparison, tradeoffs
-│
-├── 03-linux-internals/
-│   ├── namespaces.md                ← How isolation works
-│   └── cgroups.md                   ← How resource limits work
-│
-├── 04-docker-architecture/
-│   ├── overview.md                  ← Full Docker component breakdown
-│   ├── docker-engine.md
-│   ├── docker-daemon.md
-│   ├── containerd.md
-│   └── runc.md
-│
-├── 05-oci-runtime/
-│   └── notes.md                     ← What OCI is and why it matters
-│
-├── 06-container-lifecycle/
-│   └── notes.md                     ← create → start → run → pause → stop → remove
-│
-├── labs/
-│   ├── 01-install-docker.md
-│   ├── 02-verify-installation.md
-│   └── 03-first-container.md
-│
-└── mini-project/
-    └── run-nginx-website.md
-```
-
----
-
 ## 🗺️ What You Will Learn in This Phase
 
 | Topic | Concept |
@@ -327,19 +286,19 @@ OCI-compliant runtimes:
 │                      Docker Daemon                              │
 │                       (dockerd)                                 │
 │                                                                 │
-│  ┌─────────────────────────────────────────────────────────┐   │
-│  │                    containerd                           │   │
-│  │          (manages container lifecycle)                  │   │
-│  │                                                         │   │
-│  │   ┌─────────────────────────────────────────────────┐   │   │
-│  │   │              containerd-shim                    │   │   │
-│  │   │   ┌─────────────────────────────────────────┐   │   │   │
-│  │   │   │              runc                       │   │   │   │
-│  │   │   │  (creates namespaces + cgroups)         │   │   │   │
-│  │   │   │  (actually starts the container)        │   │   │   │
-│  │   │   └─────────────────────────────────────────┘   │   │   │
-│  │   └─────────────────────────────────────────────────┘   │   │
-│  └─────────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │                    containerd                           │    │
+│  │          (manages container lifecycle)                  │    │
+│  │                                                         │    │
+│  │   ┌─────────────────────────────────────────────────┐   │    │
+│  │   │              containerd-shim                    │   │    │
+│  │   │   ┌─────────────────────────────────────────┐   │   │    │
+│  │   │   │              runc                       │   │   │    │
+│  │   │   │  (creates namespaces + cgroups)         │   │   │    │
+│  │   │   │  (actually starts the container)        │   │   │    │
+│  │   │   └─────────────────────────────────────────┘   │   │    │
+│  │   └─────────────────────────────────────────────────┘   │    │
+│  └─────────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────┘
                              │
                              ▼
