@@ -409,7 +409,7 @@ which runc
                      docker start
                           │
                           ▼
-                      RUNNING ◄──────────────────┐
+                      RUNNING ◄───────────────────┐
                     (process active)              │
                           │                       │
               ┌───────────┴──────────┐            │
